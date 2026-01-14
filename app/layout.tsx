@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { StackProvider, StackTheme } from "@stackframe/stack";
-import { stackClientApp } from "../stack/client";
 import { Geist, Geist_Mono } from "next/font/google";
+import { NeonAuthUIProvider, UserButton } from "@neondatabase/auth/react";
+import { authClient } from "@/lib/auth/client";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,12 +25,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><StackProvider app={stackClientApp}><StackTheme>
-        {children}
-      </StackTheme></StackProvider></body>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen`}
+      >
+        <NeonAuthUIProvider
+          authClient={authClient}
+          redirectTo="/account/settings"
+          social={{
+            providers: ['google'],
+          }}
+          emailOTP
+        >
+          <header className='flex justify-end items-center p-4 gap-4 h-16'>
+            <UserButton size="icon" />
+          </header>
+          {children}
+        </NeonAuthUIProvider>
+      </body>
     </html>
   );
 }
