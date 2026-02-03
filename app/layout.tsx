@@ -37,7 +37,7 @@ export default function RootLayout({
           }}
           emailOTP
         >
-          <header className='flex justify-end items-center p-4 gap-4 h-16'>
+          <header className='fixed  flex justify-end items-center p-4 gap-4 w-screen h-16'>
             <UserButton size="icon" />
           </header>
           {children}
