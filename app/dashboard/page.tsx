@@ -3,7 +3,6 @@ import SideBar from "@/components/sidebar";
 import StackChart from "@/components/stack-chart";
 import { getUser } from "@/lib/helper/getUser";
 import { prisma } from "@/lib/prisma";
-import clsx from "clsx";
 import { TrendingUp } from "lucide-react";
 
 export default async function DashboardPage() {
