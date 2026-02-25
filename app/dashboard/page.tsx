@@ -25,7 +25,6 @@ export default async function DashboardPage() {
 
     const inStackPercent = totalProduct > 0 ? Math.round((inStackCount / totalProduct) * 100) : 0;
     const lowStackPercent = totalProduct > 0 ? Math.round((lowStackCount / totalProduct) * 100) : 0;
-    const outOfStackPErcent = totalProduct > 0 ? Math.round((outOfStack / totalProduct) * 100) : 0;
 
     const chartStackData = [
         {

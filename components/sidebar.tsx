@@ -32,12 +32,12 @@ export default function SideBar({ curentPath = "/dashboard" }: TSideBar) {
         },
         {
             name: "Add Product",
-            href: "add-product",
+            href: "/add-product",
             icon: Plus
         },
         {
             name: "Setting",
-            href: "/settings",
+            href: "/account/settings",
             icon: Settings
         }
 
