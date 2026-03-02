@@ -15,34 +15,32 @@ type TNavigation = {
     href: string,
     icon: LucideIcon
 }
+
+const navigation: TNavigation[] = [
+    {
+        name: "Dashboard",
+        href: "/dashboard",
+        icon: BarChart3
+    },
+    {
+        name: "Inventory",
+        href: "/inventory",
+        icon: Package
+    },
+    {
+        name: "Add Product",
+        href: "/add-product",
+        icon: Plus
+    },
+    {
+        name: "Setting",
+        href: "/account/settings",
+        icon: Settings
+    }
+
+]
 export default function SideBar({ curentPath = "/dashboard" }: TSideBar) {
-
     const path = usePathname();
-
-    const navigation: TNavigation[] = [
-        {
-            name: "Dashboard",
-            href: "/dashboard",
-            icon: BarChart3
-        },
-        {
-            name: "Inventory",
-            href: "/inventory",
-            icon: Package
-        },
-        {
-            name: "Add Product",
-            href: "/add-product",
-            icon: Plus
-        },
-        {
-            name: "Setting",
-            href: "/account/settings",
-            icon: Settings
-        }
-
-    ]
-
     return (
         <div className="fix left-0 top-0 bg-gray-900 text-white w-64 min-h-screen p-6 z-10">
             <div className="mb-8">

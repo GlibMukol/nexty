@@ -1,6 +1,6 @@
 
 type TMainContainer = {
-    sidebar: React.ReactNode,
+    sidebar?: React.ReactNode,
     children: React.ReactNode,
     header: string,
     description: string

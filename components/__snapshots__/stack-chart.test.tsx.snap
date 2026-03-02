@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Stack chart componet renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="w-68 h-68 flex-2  min-h-0"
+    style="min-height: 0; min-width: 0;"
+  >
+    <div
+      class="recharts-responsive-container"
+      style="width: 100%; height: 100%; min-width: 0;"
+    >
+      <div
+        style="width: 0px; height: 0px; overflow: visible;"
+      >
+        <div
+          class="recharts-wrapper"
+          height="200"
+          style="position: relative; cursor: default; width: 320px; height: 200px;"
+          width="320"
+        >
+          <svg
+            class="recharts-surface"
+            cx="50%"
+            cy="50%"
+            height="200"
+            role="application"
+            style="width: 100%; height: 100%; display: block;"
+            tabindex="0"
+            viewBox="0 0 320 200"
+            width="320"
+          >
+            <title />
+            <desc />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <defs>
+              <clippath
+                id="recharts1-clip"
+              >
+                <rect
+                  height="190"
+                  width="310"
+                  x="5"
+                  y="5"
+                />
+              </clippath>
+            </defs>
+            <g
+              tabindex="-1"
+            >
+              <g
+                class="recharts-layer recharts-pie"
+                tabindex="0"
+              >
+                <g
+                  class="recharts-layer"
+                />
+              </g>
+            </g>
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            />
+            <g
+              tabindex="-1"
+            >
+              <text
+                class="recharts-text recharts-label"
+                fill="#666"
+                font-weight="bold"
+                offset="5"
+                text-anchor="middle"
+                x="160"
+                y="100"
+              >
+                <tspan
+                  dy="0.355em"
+                  x="160"
+                >
+                  In Stack 70%
+                </tspan>
+              </text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

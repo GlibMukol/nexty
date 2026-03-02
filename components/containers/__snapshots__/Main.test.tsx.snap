@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Main Container render Main coneteiner and  compare with snapshot 1`] = `
+<div>
+  <div
+    class="grid grid-cols-[1rem_1fr] min-h-screen bg-gray-50"
+  >
+    <main
+      class="ml-64 p-6 text-black"
+    >
+      <div
+        class="mb-8"
+      >
+        <div
+          class="flex item-centers justify-between"
+        >
+          <div>
+            <h1
+              class="text-2xl font-semibold text-grey-900"
+            >
+              header
+            </h1>
+            <p
+              class="text-sm text-gray-500"
+            >
+              description
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="space-y-6"
+      />
+    </main>
+  </div>
+</div>
+`;

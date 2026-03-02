@@ -34,12 +34,12 @@ const getVisiblePages = (total: number, current: number, goToPage: (page: number
         rangeWithDots.push(total);
     }
 
-    return rangeWithDots.map(item => {
-        if (item === '...') return <span key={item} className="px-3 py-2 text-sm text-gray-500">...</span>
+    return rangeWithDots.map((item, idx) => {
+        if (item === '...') return <span key={idx} className="px-3 py-2 text-sm text-gray-500">...</span>
         return (
             <Link
                 href={goToPage(Number(item))}
-                key={item}
+                key={idx}
                 className={`px-3 py-2 text-sm font-medium rounded-lg ${Number(item) === current ? "bg-blue-400 text-white" : "text-gray-700 hover:bg-gray-100 border border-gray-400"
                     }`}
             >
