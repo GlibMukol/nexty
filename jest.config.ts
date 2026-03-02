@@ -27,11 +27,8 @@ const config: Config = {
   ],
 
   moduleNameMapper: {
-    '^@neondatabase/auth(.*)$': '<rootDir>/__mocks__/neonAuthMock.ts',
+    '^@neondatabase/auth(.*)$': '<rootDir>/__mocks__/neonAuthMock.tsx',
     '^better-auth(.*)$': '<rootDir>/__mocks__/neonAuthMock.ts',
-    '^@neondatabase/auth/react': '<rootDir>/__mocks__/neonAuthComponetMock.tsx',
-    // Mock lucide-react icons to prevent ESM transform issues in Jest
-    '^lucide-react$': '<rootDir>/__mocks__/lucideReactMock.tsx',
   },
 }
 
