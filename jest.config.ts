@@ -1,6 +1,7 @@
 import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
 
+
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: './',
@@ -10,17 +11,16 @@ const createJestConfig = nextJest({
 const config: Config = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
   coverageProvider: 'v8',
-  // testEnvironment: 'jsdom',
   testEnvironment: 'jest-environment-jsdom',
   collectCoverage: true,
   collectCoverageFrom: [
     './**/*.{js,jsx,ts,tsx}',
-    '**/*.{js,jsx,ts,tsx}',          // Include all JS/TS files
-    '!**/node_modules/**',           // Exclude node_modules
-    '!**/vendor/**',                 // Exclude vendor folders
-    '!**/.next/**',                  // Exclude Next.js build folder
-    '!**/coverage/**',               // Exclude the coverage report itself
-    '!jest.config.{ts,js}',               // Exclude config files
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
+    '!**/vendor/**',
+    '!**/.next/**',
+    '!**/coverage/**',
+    '!jest.config.{ts,js}',
     '!**/*.d.ts',
     '!next.config.ts',
     '!prisma.config.ts'

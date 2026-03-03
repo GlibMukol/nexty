@@ -10,13 +10,13 @@ import { usePathname } from "next/navigation"
 type TSideBar = {
     curentPath: string
 }
-type TNavigation = {
+export type TNavigation = {
     name: string,
     href: string,
     icon: LucideIcon
 }
 
-const navigation: TNavigation[] = [
+export const navigation: TNavigation[] = [
     {
         name: "Dashboard",
         href: "/dashboard",
@@ -54,7 +54,7 @@ export default function SideBar({ curentPath = "/dashboard" }: TSideBar) {
                     Inventory
                 </div>
                 {navigation.map((item, idx) => (
-                    <Link href={item.href} key={idx} className={clsx("flex space-x-3 items-center rounded-lg p-2 py-3 hover:bg-gray-500", item.href === path && "bg-gray-600")} >
+                    <Link data-testid={item.name} href={item.href} key={idx} className={clsx("flex space-x-3 items-center rounded-lg p-2 py-3 hover:bg-gray-500", item.href === path && "bg-gray-600")} >
                         <item.icon className="w-5 h-5" />
                         <span className="text-sm">
                             {item.name}

@@ -6,5 +6,4 @@ export const UserProfile = () => <div>Mocked User Profile</div>;
 export const LogoutButton = () => <button>Mocked Logout</button>;
 export const UserButton = () => <div>User Button</div>
 
-// export const UserProfile = () => "Mocked User Profile";
-// export const SignOutButton = () => "Mocked Sign Out";
+export const SignOutButton = () => "Mocked Sign Out";

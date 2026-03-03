@@ -1,29 +1,33 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import { describe, it, expect, afterEach, jest } from '@jest/globals';
-import SideBar from "./sidebar";
-import { UserButton } from "@neondatabase/auth/react";
-// import { usePathname } from "next/navigation";
+import { TNavigation } from "./sidebar";
 
-jest.mock('@neondatabase/auth/react', () => ({
-    // 2. Return a dummy component for the named export 'UserButton'
-    UserButton: () => <div data-testid="mock-user-button">Mocked UserButton</div>,
-}));
-const mockUsePathName = jest.fn();
-
+const mockUsePathname = jest.fn();
 jest.mock('next/navigation', () => ({
-    usePathname() {
-        return mockUsePathName()
-    }
+    usePathname: () => mockUsePathname()
 }));
-afterEach(() => {
-    jest.clearAllMocks();
-});
-// const hrefs = n
 
 describe("SideBar component", () => {
-    it("render and compare withh snapshot", () => {
-        mockUsePathName.mockReturnValueOnce("/dashboard");
-        console.log('SideBar :>> ', SideBar);
-        render(<SideBar curentPath="/dashboard" />)
+    const { default: SideBar, navigation } = require("./sidebar");
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+    beforeEach(() => {
+        mockUsePathname.mockClear();
     })
-})
+
+    it("render and compare with snapshot", () => {
+        const { container } = render(<SideBar curentPath="/dashboard" />);
+        expect(container).toMatchSnapshot();
+    });
+
+    it.each(navigation.map((i: TNavigation) => [i.href, i.name]))("should show active item in list according page %s", (href, item) => {
+
+        mockUsePathname.mockImplementationOnce(() => href);
+        render(<SideBar curentPath={href} />);
+        const result = screen.getByTestId(`${item}`);
+        expect(mockUsePathname).toHaveBeenCalled();
+        expect(result.classList.contains("bg-gray-600")).toBe(true);
+    });
+});
