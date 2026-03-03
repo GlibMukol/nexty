@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from '@jest/globals';
-import { Pagination } from "./pagination";
+import { Pagination } from "../pagination";
 
 describe("Pagination Component", () => {
     const defaultProps = {

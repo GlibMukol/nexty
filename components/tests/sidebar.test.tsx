@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { describe, it, expect, afterEach, jest } from '@jest/globals';
-import { TNavigation } from "./sidebar";
+import { TNavigation } from "../sidebar";
 
 const mockUsePathname = jest.fn();
 jest.mock('next/navigation', () => ({
@@ -9,7 +9,7 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe("SideBar component", () => {
-    const { default: SideBar, navigation } = require("./sidebar");
+    const { default: SideBar, navigation } = require("../sidebar");
     afterEach(() => {
         jest.clearAllMocks();
     });

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, it, expect, jest } from '@jest/globals';
-import ProductsChart from "./products-chart";
+import ProductsChart from "../products-chart";
 
 jest.fn().mockImplementation(() => ({
     observe: jest.fn(),

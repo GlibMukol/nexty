@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, it, expect, jest } from '@jest/globals';
-import StackChart from "./stack-chart";
+import StackChart from "../stack-chart";
 
 
 
