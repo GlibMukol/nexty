@@ -1,15 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import { it, describe, expect, jest } from "@jest/globals";
+import { it, describe, expect, jest, beforeAll, beforeEach } from "@jest/globals";
 import userEvent from '@testing-library/user-event';
-import '@testing-library/jest-dom';
-
+import '@testing-library/jest-dom/jest-globals';
 
 
 jest.mock("../../../lib/helper/getUser", () => ({
     getUser: jest.fn()
 }));
 
-jest.mock("../../../lib/actions/product.ts", () => ({
+jest.mock("../../../lib/actions/product", () => ({
     addInventory: jest.fn(),
     deleteInventory: jest.fn()
 }))
@@ -18,7 +17,7 @@ jest.mock("../../../lib/actions/product.ts", () => ({
 
 describe("Add product page", () => {
     const { default: AddProduct } = require("../page")
-    beforeEach(jest.clearAllMocks);
+    beforeEach(async () => jest.clearAllMocks());
     it("should be mutch with snapshot", async () => {
         const ResolvedAddProduct = await AddProduct()
         const { container } = render(ResolvedAddProduct);
@@ -27,8 +26,8 @@ describe("Add product page", () => {
     it("should have input name is requred", async () => {
         const ResolvedAddProduct = await AddProduct();
         const { container } = render(ResolvedAddProduct);
-        const input = container.querySelector("#name");
-        expect(input).toHaveAttribute("required")
+        const input = container.querySelector("#name") as HTMLInputElement;
+        expect(input).toHaveAttribute("required");
 
     })
     it("should have input name is requred", async () => {
@@ -48,7 +47,7 @@ describe("Add product page", () => {
 
         let ResolvedAddProduct;
         let input: HTMLInputElement;
-        beforeAll(async () => {
+        beforeEach(async () => {
             ResolvedAddProduct = await AddProduct();
             const { container } = render(ResolvedAddProduct);
             const cmpnt = container.querySelector("#quantity");
@@ -74,7 +73,7 @@ describe("Add product page", () => {
 
         let ResolvedAddProduct;
         let input: HTMLInputElement;
-        beforeAll(async () => {
+        beforeEach(async () => {
             ResolvedAddProduct = await AddProduct();
             const { container } = render(ResolvedAddProduct);
             const cmpnt = container.querySelector("#price");
@@ -101,7 +100,7 @@ describe("Add product page", () => {
     describe("SCU input", () => {
         let ResolvedAddProduct;
         let input: HTMLInputElement;
-        beforeAll(async () => {
+        beforeEach(async () => {
             ResolvedAddProduct = await AddProduct();
             const { container } = render(ResolvedAddProduct);
             const cmpnt = container.querySelector("#scu");
