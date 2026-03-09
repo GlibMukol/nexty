@@ -27,6 +27,7 @@ const config: Config = {
   ],
 
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
     '^@neondatabase/auth(.*)$': '<rootDir>/__mocks__/neonAuthMock.tsx',
     '^better-auth(.*)$': '<rootDir>/__mocks__/neonAuthMock.ts',
   },
