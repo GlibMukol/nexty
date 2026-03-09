@@ -6,7 +6,7 @@ import { getUser } from "@/lib/helper/getUser";
 import { prisma } from "@/lib/prisma";
 import { TrendingUp } from "lucide-react";
 
-async function getChartData(totalProduct: any, allProducts: any) {
+export async function getChartData(totalProduct: any, allProducts: any) {
     const inStackCount = allProducts.filter(
         (p: any) => Number(p.quantity) > 5,
     ).length;

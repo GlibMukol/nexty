@@ -294,7 +294,6 @@ exports[`Dashboard page should be match with snapshot 1`] = `
                 <div
                   class="text-3xl font-bold text-gray-900"
                 >
-                  $
                   1015192
                 </div>
                 <div
@@ -382,15 +381,11 @@ exports[`Dashboard page should be match with snapshot 1`] = `
           <div
             class="bg-white rounded-lg border border-gray-200 p-6"
           >
-            <div
-              class="flex items-center justify-between mb-6"
+            <h2
+              class="text-lg font-semibold text-gray-900 mb-6"
             >
-              <h2
-                class="text-lg font-semibold text-gray-900 mb-6"
-              >
-                New products per week
-              </h2>
-            </div>
+              New products per week
+            </h2>
             <div
               class="h-48"
             >
@@ -1412,236 +1407,232 @@ exports[`Dashboard page should be match with snapshot 1`] = `
           <div
             class="bg-white rounded-lg border border-gray-200 p-6"
           >
-            <div
-              class="flex-items-center justify-between mb-6"
+            <h2
+              class="text-lg font-semibold text-gray-900 mb-6"
             >
-              <h2
-                class="text-lg font-semibold text-gray-900"
-              >
-                Stock Levels
-              </h2>
+              Stock Levels
+            </h2>
+            <div
+              class="space-y-3"
+            >
               <div
-                class="space-y-3"
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
               >
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    447
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  447
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    222
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  222
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    450
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  450
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    185
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  185
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    477
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  477
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    445
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  445
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    294
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  294
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    57
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  57
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    307
-                     units
                   </div>
                 </div>
                 <div
-                  class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                  class="text-sm font-medium text-green-600"
+                >
+                  307
+                   units
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+              >
+                <div
+                  class="flex items-center gap-4"
                 >
                   <div
-                    class="flex items-center gap-4"
-                  >
-                    <div
-                      class="w-3 h-3 rounded-full bg-green-600"
+                    class="w-3 h-3 rounded-full bg-green-600"
+                  />
+                  <div>
+                    <span
+                      class="text-sm font-medium text-gray-800"
                     />
-                    <div>
-                      <span
-                        class="text-sm font-medium text-gray-800"
-                      />
-                    </div>
                   </div>
-                  <div
-                    class="text-sm font-medium text-green-600"
-                  >
-                    122
-                     units
-                  </div>
+                </div>
+                <div
+                  class="text-sm font-medium text-green-600"
+                >
+                  122
+                   units
                 </div>
               </div>
             </div>
@@ -1681,7 +1672,8 @@ exports[`Dashboard page should be match with snapshot 1`] = `
                     class="text-sm font-light"
                     style="color: rgb(0, 136, 254);"
                   >
-                     (
+                     
+                    (
                     100
                     ) %
                   </span>
@@ -1703,7 +1695,8 @@ exports[`Dashboard page should be match with snapshot 1`] = `
                     class="text-sm font-light"
                     style="color: rgb(0, 196, 159);"
                   >
-                     (
+                     
+                    (
                     0
                     ) %
                   </span>
@@ -1725,7 +1718,8 @@ exports[`Dashboard page should be match with snapshot 1`] = `
                     class="text-sm font-light"
                     style="color: rgb(255, 187, 40);"
                   >
-                     (
+                     
+                    (
                     0
                     ) %
                   </span>
