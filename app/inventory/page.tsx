@@ -39,33 +39,70 @@ export default async function Inventory({ searchParams }: { searchParams: TSearc
                 sidebar={<SideBar curentPath="/inventory" />}
             >
                 <div className="bg-white rounded-lg border border-gray-200 p-6">
-                    <form className="flex gap-2" action="/inventory" method="GET">
-                        <input name="query" placeholder="Search..." defaultValue={contains} className="px-4 py-2 flex-1 border border-gray-300 rounded-lg focus:border-transparent" />
-                        <button type="submit" className="px-6 py-2 bg-blue-400 rounded-lg hover:bg-blue-600 text-white">Search</button>
+                    <form
+                        className="flex flex-col gap-2 sm:flex-row"
+                        action="/inventory"
+                        method="GET"
+                    >
+                        <input
+                            name="query"
+                            placeholder="Search..."
+                            defaultValue={contains}
+                            className="w-full flex-1 rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent"
+                        />
+                        <button
+                            type="submit"
+                            className="w-full rounded-lg bg-blue-400 px-6 py-2 text-white hover:bg-blue-600 sm:w-auto"
+                        >
+                            Search
+                        </button>
                     </form>
                 </div>
 
-                <div className="bg-white rounded-lg border border-gray-200">
-                    <table className="w-full ">
+                <div className="overflow-hidden rounded-lg border border-gray-200 bg-white">
+                    <div className="overflow-x-auto">
+                        <table className="min-w-[720px] w-full">
                         <thead className="bg-gray-50">
                             <tr>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">SKU</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Price</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Quantity</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Low Stack</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                    Name
+                                </th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                    SKU
+                                </th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                    Price
+                                </th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                    Quantity
+                                </th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                    Low Stack
+                                </th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                    Actions
+                                </th>
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200 ">
                             {products.map(product => (
                                 <tr className="" key={product.id}>
-                                    <td className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{product.name}</td>
-                                    <td className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{product.sku || "-"}</td>
-                                    <td className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{Number(product.price)}</td>
-                                    <td className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{product.quantity}</td>
-                                    <td className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">{product.lowStockAt || "-"}</td>
-                                    <td className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                                    <td className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                        {product.name}
+                                    </td>
+                                    <td className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                        {product.sku || "-"}
+                                    </td>
+                                    <td className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                        {Number(product.price)}
+                                    </td>
+                                    <td className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                        {product.quantity}
+                                    </td>
+                                    <td className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
+                                        {product.lowStockAt || "-"}
+                                    </td>
+                                    <td className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase sm:px-6">
                                         <form action={async (formData: FormData) => {
                                             "use server"
                                             const test = await deleteInventory(formData);
@@ -79,6 +116,7 @@ export default async function Inventory({ searchParams }: { searchParams: TSearc
                             ))}
                         </tbody>
                     </table>
+                    </div>
                 </div>
                 {
                     totalPages > 1 ?

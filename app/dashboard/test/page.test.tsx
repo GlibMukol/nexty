@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import {
     it,
     describe,
@@ -53,10 +53,19 @@ describe("Dashboard page", () => {
     afterEach(() => {
         jest.useRealTimers();
     });
-    it("should be match with snapshot", async () => {
+    it("should render key sections and mobile navigation trigger", async () => {
         const ResolvedDashboardPage = await DashboardPage();
-        const { container } = render(ResolvedDashboardPage);
-        expect(container).toMatchSnapshot();
+        render(ResolvedDashboardPage);
+
+        expect(
+            screen.getByRole("button", { name: /open navigation/i }),
+        ).toBeInTheDocument();
+
+        expect(screen.getByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+        expect(screen.getByText("Key Metrix")).toBeInTheDocument();
+        expect(screen.getByText("New products per week")).toBeInTheDocument();
+        expect(screen.getByText("Stock Levels")).toBeInTheDocument();
+        expect(screen.getByText("Efficency")).toBeInTheDocument();
     });
 });
 

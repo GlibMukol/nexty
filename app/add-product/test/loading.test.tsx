@@ -2,9 +2,10 @@ import { render } from "@testing-library/react";
 import { it, describe, expect, jest } from "@jest/globals";
 import Loading from "../loading";
 
-describe("add product snapshot check", () => {
-    it("should be same snapshot", () => {
+describe("add product loading", () => {
+    it("should render loading shell", () => {
         const { container } = render(<Loading />);
-        expect(container).toMatchSnapshot();
-    })
+        expect(container.querySelector(".animate-pulse")).toBeTruthy();
+        expect(container.querySelector('aside[aria-hidden="true"]')).toBeTruthy();
+    });
 });

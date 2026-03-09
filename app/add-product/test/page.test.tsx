@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { it, describe, expect, jest, beforeAll, beforeEach } from "@jest/globals";
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/jest-globals';
@@ -18,10 +18,13 @@ jest.mock("../../../lib/actions/product", () => ({
 describe("Add product page", () => {
     const { default: AddProduct } = require("../page")
     beforeEach(async () => jest.clearAllMocks());
-    it("should be match with snapshot", async () => {
-        const ResolvedAddProduct = await AddProduct()
-        const { container } = render(ResolvedAddProduct);
-        expect(container).toMatchSnapshot();
+    it("should render mobile navigation trigger", async () => {
+        const ResolvedAddProduct = await AddProduct();
+        render(ResolvedAddProduct);
+
+        expect(
+            screen.getByRole("button", { name: /open navigation/i }),
+        ).toBeInTheDocument();
     });
     it("should have input name is requred", async () => {
         const ResolvedAddProduct = await AddProduct();

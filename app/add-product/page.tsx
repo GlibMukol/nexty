@@ -12,7 +12,7 @@ export default async function AddProduct() {
             description="Add a new product to your inventory"
             sidebar={<SideBar curentPath="/add-product" />}
         >
-            <div className="max-w-2xl">
+            <div className="w-full max-w-2xl">
                 <div className="bg-white rounded-lg border border-gray-200 p-6">
                     <form className="space-y-6" action={addInventory}>
                         <div>
@@ -99,9 +99,19 @@ export default async function AddProduct() {
                                 placeholder="Enter low stack"
                             />
                         </div>
-                        <div className="flex gap-4 justify-center">
-                            <button type="submit" className="uppercase text-center px-6 py-3 w-36 bg-blue-500 text-white rounded-lg hover:bg-blue-800 hover:scale-110 transition-transform duration-200">Add </button>
-                            <Link href="/inventory" className="uppercase text-center px-6 w-36 py-3 bg-gray-500 text-white rounded-lg hover:bg-red-500  hover:scale-110  transition-transform duration-200">cancel </Link>
+                        <div className="flex flex-col gap-4 justify-center sm:flex-row">
+                            <button
+                                type="submit"
+                                className="w-full rounded-lg bg-blue-500 px-6 py-3 text-center uppercase text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-blue-800 sm:w-36"
+                            >
+                                Add
+                            </button>
+                            <Link
+                                href="/inventory"
+                                className="w-full rounded-lg bg-gray-500 px-6 py-3 text-center uppercase text-white transition-transform duration-200 hover:scale-[1.02] hover:bg-red-500 sm:w-36"
+                            >
+                                cancel
+                            </Link>
                         </div>
 
                     </form>

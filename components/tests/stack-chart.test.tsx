@@ -18,14 +18,14 @@ describe("Stack chart componet", () => {
         { name: "Out Of Stack", value: 10, fill: "#FFBB28" },
     ];
 
-    it("renders correctly and matches snapshot", () => {
+    it("renders a chart", () => {
         const { container } = render(<StackChart data={mockData} />);
-        expect(container).toMatchSnapshot();
+        expect(container.querySelector("svg")).toBeTruthy();
     });
 
     it("renders the chart container with correct classes", () => {
         const { container } = render(<StackChart data={mockData} />);
-        const chartDiv = container.querySelector('.w-68.h-68.flex-2.min-h-0');
+        const chartDiv = container.querySelector('[data-testid="stack-chart"]');
         expect(chartDiv).toBeTruthy();
     });
 

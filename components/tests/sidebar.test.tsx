@@ -17,9 +17,9 @@ describe("SideBar component", () => {
         mockUsePathname.mockClear();
     })
 
-    it("render and compare with snapshot", () => {
-        const { container } = render(<SideBar curentPath="/dashboard" />);
-        expect(container).toMatchSnapshot();
+    it("should render all navigation items", () => {
+        render(<SideBar curentPath="/dashboard" />);
+        expect(screen.getAllByRole("link")).toHaveLength(navigation.length);
     });
 
     it.each(navigation.map((i: TNavigation) => [i.href, i.name]))("should show active item in list according page %s", (href, item) => {

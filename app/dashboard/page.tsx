@@ -87,7 +87,7 @@ function KeyMetrics({
         <div className="bg-white rounded-lg border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-6">Key Metrix</h2>
 
-            <div className="grid grid-cols-3 gap-6 ">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
                 {metrics.map((metric, index) => (
                     <div key={index} className="text-center">
                         <div className="text-3xl font-bold text-gray-900">
@@ -186,8 +186,8 @@ export default async function DashboardPage() {
                         </h2>
                     </div>
 
-                    <div className="flex items-center justify-around">
-                        <div className="relative w-1/3 h-1/3 flex flex-col gap-4 flex-3">
+                    <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-around">
+                        <div className="relative flex w-full flex-col gap-4 md:w-1/2 lg:w-1/3">
                             {chartStackData.map((stack, key) => {
                                 return (
                                     <div

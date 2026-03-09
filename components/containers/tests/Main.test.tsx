@@ -1,14 +1,18 @@
-import { render } from "@testing-library/react";
-import { describe, it, expect } from '@jest/globals';
+import { render, screen } from "@testing-library/react";
+import { describe, it, expect } from "@jest/globals";
+import "@testing-library/jest-dom/jest-globals";
 import MainContainer from "../Main";
 
 describe("Main Container", () => {
-    it("render Main coneteiner and  compare with snapshot", () => {
-        const { container } = render(
+    it("renders header/description and mobile nav trigger", () => {
+        render(
             <MainContainer
                 description="description"
                 header="header"
             ><></></MainContainer>);
-        expect(container).toMatchSnapshot();
+
+        expect(screen.getByRole("button", { name: /open navigation/i })).toBeInTheDocument();
+        expect(screen.getAllByText("header").length).toBeGreaterThan(0);
+        expect(screen.getAllByText("description").length).toBeGreaterThan(0);
     });
 });

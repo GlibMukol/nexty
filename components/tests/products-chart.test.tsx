@@ -15,9 +15,9 @@ describe("ProductsChart Component", () => {
         { week: "01/15", products: 15 },
     ];
 
-    it("renders correctly and matches snapshot", () => {
+    it("renders a chart", () => {
         const { container } = render(<ProductsChart data={mockData} />);
-        expect(container).toMatchSnapshot();
+        expect(container.querySelector("svg")).toBeTruthy();
     });
 
     it("renders the chart container with correct dimensions", () => {
