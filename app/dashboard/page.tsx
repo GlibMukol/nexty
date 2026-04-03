@@ -84,25 +84,25 @@ function KeyMetrics({
     ];
 
     return (
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">Key Metrix</h2>
+        <div className="bg-white rounded-lg border border-gray-200 p-6 dark:bg-zinc-900 dark:border-zinc-800">
+            <h2 className="text-lg font-semibold text-gray-900 mb-6 dark:text-zinc-100">Key Metrix</h2>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
                 {metrics.map((metric, index) => (
                     <div key={index} className="text-center">
-                        <div className="text-3xl font-bold text-gray-900">
+                        <div className="text-3xl font-bold text-gray-900 dark:text-zinc-100">
                             {index === 1 ? `${metric.value}` : metric.value}
                         </div>
 
-                        <div className="text-sm text-gray-600">{metric.label}</div>
+                        <div className="text-sm text-gray-600 dark:text-zinc-400">{metric.label}</div>
 
                         <div className="flex items-center justify-center mt-1">
-                            <span className="text-sm text-green-600">
+                            <span className="text-sm text-green-600 dark:text-green-500">
                                 {metric.sign}
                                 {metric.value}
                             </span>
 
-                            <TrendingUp className="w-3 h-3 text-gray-600 ml-1" />
+                            <TrendingUp className="w-3 h-3 text-gray-600 dark:text-zinc-500 ml-1" />
                         </div>
                     </div>
                 ))}
@@ -113,8 +113,8 @@ function KeyMetrics({
 
 function NewProducts({ weeklyProductsData }: { weeklyProductsData: any[] }) {
     return (
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">
+        <div className="bg-white rounded-lg border border-gray-200 p-6 dark:bg-zinc-900 dark:border-zinc-800">
+            <h2 className="text-lg font-semibold text-gray-900 mb-6 dark:text-zinc-100">
                 New products per week
             </h2>
 
@@ -179,9 +179,9 @@ export default async function DashboardPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <StockLevels recentProducts={recentProducts} />
 
-                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <div className="bg-white rounded-lg border border-gray-200 p-6 dark:bg-zinc-900 dark:border-zinc-800">
                     <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-lg font-semibold text-gray-900 mb-2">
+                        <h2 className="text-lg font-semibold text-gray-900 mb-2 dark:text-zinc-100">
                             Efficency
                         </h2>
                     </div>
@@ -192,14 +192,14 @@ export default async function DashboardPage() {
                                 return (
                                     <div
                                         key={key}
-                                        className="flex items-center min-w-20  justify-start gap-4 p-3 rounded-lg bg-gray-50"
+                                        className="flex items-center min-w-20  justify-start gap-4 p-3 rounded-lg bg-gray-50 dark:bg-zinc-800"
                                     >
                                         <div
                                             className="w-2 h-2 rounded-full"
                                             style={{ backgroundColor: stack.fill }}
                                         />
 
-                                        <div className="text-sm font-bold">{stack.name} </div>
+                                        <div className="text-sm font-bold dark:text-zinc-200">{stack.name} </div>
 
                                         <span
                                             className="text-sm font-light"

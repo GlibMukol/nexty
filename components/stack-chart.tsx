@@ -23,7 +23,7 @@ export default function StackChart({ data }: { data: TStackPie[] }) {
                     responsive
                 >
                     <Pie data={data} dataKey="value" nameKey="name" outerRadius="80%" innerRadius="60%" isAnimationActive={true} />
-                    <Label fontWeight={"bold"} position="center" fill="#666">
+                    <Label fontWeight={"bold"} position="center" fill="var(--foreground, #ededed)">
                         {`${data[0].name} ${data[0].value}%`}
                     </Label>
                 </PieChart>

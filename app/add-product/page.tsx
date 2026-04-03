@@ -13,12 +13,12 @@ export default async function AddProduct() {
             sidebar={<SideBar curentPath="/add-product" />}
         >
             <div className="w-full max-w-2xl">
-                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <div className="bg-white rounded-lg border border-gray-200 p-6 dark:bg-zinc-900 dark:border-zinc-800">
                     <form className="space-y-6" action={addInventory}>
                         <div>
                             <label
                                 htmlFor="name"
-                                className="block text-sm font-medium text-gray-700 mb-2"
+                                className="block text-sm font-medium text-gray-700 mb-2 dark:text-zinc-300"
                             >
                                 Product name*
                             </label>
@@ -27,7 +27,7 @@ export default async function AddProduct() {
                                 id="name"
                                 name="name"
                                 required
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100"
                                 placeholder="Enter product name"
                             />
                         </div>
@@ -35,7 +35,7 @@ export default async function AddProduct() {
                             <div>
                                 <label
                                     htmlFor="quantity"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    className="block text-sm font-medium text-gray-700 mb-2 dark:text-zinc-300"
                                 >
                                     Product quantity*
                                 </label>
@@ -45,14 +45,14 @@ export default async function AddProduct() {
                                     name="quantity"
                                     min="0"
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100"
                                     placeholder="0"
                                 />
                             </div>
                             <div>
                                 <label
                                     htmlFor="price"
-                                    className="block text-sm font-medium text-gray-700 mb-2"
+                                    className="block text-sm font-medium text-gray-700 mb-2 dark:text-zinc-300"
                                 >
                                     Price*
                                 </label>
@@ -63,7 +63,7 @@ export default async function AddProduct() {
                                     step="0.01"
                                     min="0"
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100"
                                     placeholder="0.0"
                                 />
                             </div>
@@ -71,7 +71,7 @@ export default async function AddProduct() {
                         <div>
                             <label
                                 htmlFor="scu"
-                                className="block text-sm font-medium text-gray-700 mb-2"
+                                className="block text-sm font-medium text-gray-700 mb-2 dark:text-zinc-300"
                             >
                                 SCU(optional)
                             </label>
@@ -79,14 +79,14 @@ export default async function AddProduct() {
                                 type="text"
                                 id="scu"
                                 name="scu"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100"
                                 placeholder="Enter SKU"
                             />
                         </div>
                         <div>
                             <label
                                 htmlFor="lowStackAt"
-                                className="block text-sm font-medium text-gray-700 mb-2"
+                                className="block text-sm font-medium text-gray-700 mb-2 dark:text-zinc-300"
                             >
                                 Low Stock(optional)
                             </label>
@@ -95,7 +95,7 @@ export default async function AddProduct() {
                                 id="lowStackAt"
                                 name="lowStackAt"
                                 min="0"
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-transparent dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100"
                                 placeholder="Enter low stack"
                             />
                         </div>

@@ -107,7 +107,7 @@ export default function SideBar({
                         ))}
                     </nav>
 
-                    <div className="mt-auto pt-6">
+                    <div className="mt-auto pt-6 border-t border-white/10">
                         <UserButton />
                     </div>
                 </aside>
@@ -135,9 +135,9 @@ export default function SideBar({
                         href={item.href}
                         key={item.href}
                         className={clsx(
-                            "flex items-center rounded-lg p-2 py-3 hover:bg-gray-500",
+                            "flex items-center rounded-lg p-2 py-3 hover:bg-gray-700",
                             "gap-3 md:justify-center lg:justify-start",
-                            item.href === path && "bg-gray-600",
+                            item.href === path && "bg-gray-700",
                         )}
                     >
                         <item.icon className="h-5 w-5" />
@@ -146,7 +146,7 @@ export default function SideBar({
                 ))}
             </nav>
 
-            <div className="mt-auto pt-6">
+            <div className="mt-auto pt-6 border-t border-white/10">
                 <UserButton />
             </div>
         </aside>

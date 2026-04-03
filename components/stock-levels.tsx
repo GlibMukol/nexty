@@ -1,8 +1,8 @@
 
 function StockLevels({ recentProducts }: { recentProducts: any[] }) {
     return (
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">Stock Levels</h2>
+        <div className="bg-white rounded-lg border border-gray-200 p-6 dark:bg-zinc-900 dark:border-zinc-800">
+            <h2 className="text-lg font-semibold text-gray-900 mb-6 dark:text-zinc-100">Stock Levels</h2>
 
             <div className="space-y-3">
                 {recentProducts.map((prd, key) => {
@@ -24,7 +24,7 @@ function StockLevels({ recentProducts }: { recentProducts: any[] }) {
                     return (
                         <div
                             key={key}
-                            className="flex items-center justify-between p-3 rounded-lg bg-gray-50"
+                            className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-zinc-800"
                         >
                             <div className="flex items-center gap-4">
                                 <div
@@ -32,7 +32,7 @@ function StockLevels({ recentProducts }: { recentProducts: any[] }) {
                                 />
 
                                 <div>
-                                    <span className="text-sm font-medium text-gray-800">
+                                    <span className="text-sm font-medium text-gray-800 dark:text-zinc-200">
                                         {prd.name}
                                     </span>
                                 </div>

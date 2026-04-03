@@ -38,13 +38,14 @@ export default function ProductsChart({ data }: { data: Array<ProductCharData> }
                     />
                     <Tooltip
                         contentStyle={{
-                            backgroundColor: "#fff",
-                            border: "1px solid #edfff4",
+                            backgroundColor: "#171717",
+                            border: "1px solid #262626",
                             borderRadius: "8px",
-                            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.3)"
+                            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.5)",
+                            color: "#ededed"
                         }}
                         labelStyle={{
-                            color: "gray",
+                            color: "#a1a1aa",
                             fontWeight: 500
                         }}
                     />

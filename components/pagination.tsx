@@ -35,12 +35,12 @@ const getVisiblePages = (total: number, current: number, goToPage: (page: number
     }
 
     return rangeWithDots.map((item, idx) => {
-        if (item === '...') return <span key={idx} className="px-3 py-2 text-sm text-gray-500">...</span>
+        if (item === '...') return <span key={idx} className="px-3 py-2 text-sm text-gray-500 dark:text-zinc-500">...</span>
         return (
             <Link
                 href={goToPage(Number(item))}
                 key={idx}
-                className={`px-3 py-2 text-sm font-medium rounded-lg ${Number(item) === current ? "bg-blue-400 text-white" : "text-gray-700 hover:bg-gray-100 border border-gray-400"
+                className={`px-3 py-2 text-sm font-medium rounded-lg ${Number(item) === current ? "bg-blue-400 text-white" : "text-gray-700 hover:bg-gray-100 border border-gray-400 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:border-zinc-600"
                     }`}
             >
                 {item}
@@ -70,14 +70,14 @@ export const Pagination = ({
     return (
         <nav className="flex items-center justify-center gap-1">
             <Link href={getPagePagination(current - 1)}
-                className={`flex items-center px-3 py-2 text-sm font-medium rounded-lg  hover:bg-gray-200 ${current <= 1 ? 'text-gray-400 cursor-not-allowed bg-gray-100' : ""}`}
+                className={`flex items-center px-3 py-2 text-sm font-medium rounded-lg  hover:bg-gray-200 dark:hover:bg-zinc-700 ${current <= 1 ? 'text-gray-400 cursor-not-allowed bg-gray-100 dark:bg-zinc-800 dark:text-zinc-600' : "dark:text-zinc-300"}`}
                 area-disabled={current <= 1 ? "true" : ""}
             >
                 <ChevronLeft /> Prevous
             </Link>
             {getVisiblePages(total, current, getPagePagination)}
             <Link href={getPagePagination(current + 1)}
-                className={`flex items-center px-3 py-2 text-sm font-medium rounded-lg hover:bg-gray-200  ${current >= total ? 'text-gray-400 cursor-not-allowed bg-gray-100' : ""}`}
+                className={`flex items-center px-3 py-2 text-sm font-medium rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-700  ${current >= total ? 'text-gray-400 cursor-not-allowed bg-gray-100 dark:bg-zinc-800 dark:text-zinc-600' : "dark:text-zinc-300"}`}
                 area-disabled={current >= total ? "true" : ""}
             >
                 <ChevronRight /> Next
